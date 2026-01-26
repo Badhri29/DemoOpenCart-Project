@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="32.069" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="Register" name="To check Register with mandatroy filed only" time="12.748">
+<testsuite name="Cucumber" time="29.158" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Checkout" name="Navigate to checkout page without accept terms and conditions" time="11.45">
 <system-out><![CDATA[
 Given Open Browser and launch url...........................................passed
-When click "register_link" button...........................................passed
-When enter mandatroy filed only.............................................passed
-And click "register_submit" button..........................................passed
-Then system should display "registrationCompleted" message..................passed
+And the user logs in with valid credentials.................................passed
+And the user add product to the cart........................................passed
+When click "Checkout" button................................................passed
+Then system should display "termsAndConditionsWarning" message..............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login" name="To check Login with valid credential" time="10.937">
+<testcase classname="Checkout" name="Verify order confirm details and place order" time="17.569">
 <system-out><![CDATA[
 Given Open Browser and launch url...........................................passed
-When click "login_link" button..............................................passed
-When enter email and password...............................................passed
-And click "login_submit" button.............................................passed
-Then user should navigate to home page......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="AddToCart" name="View product in cart after adding" time="8.211">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When the user enters a "validProductName" in the search field...............passed
-And click "search" button...................................................passed
-And click "Add to Cart" button..............................................passed
-And click "shopping Cart" button............................................passed
-And check added product should present in the cart page.....................passed
+And the user logs in with valid credentials.................................passed
+And the user add product to the cart........................................passed
+Given user accept terms and condition.......................................passed
+When click "Checkout" button................................................passed
+And process all checkout steps..............................................passed
+Then system should display "orderConfirm" message...........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

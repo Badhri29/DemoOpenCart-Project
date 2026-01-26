@@ -33,7 +33,8 @@ public class CommonSteps extends CommonUtility {
 		case "login_submit":
 			click(pomManager.getLoginPom().getLoginBtn(), time);
 			break;
-		case "continue":
+		case "Checkout":
+			click(pomManager.getCartPom().getCheckOutBtn(), time);
 			break;
 		case "search":
 			click(pomManager.getCommonElement().getSearchBtn(), time);
@@ -89,20 +90,34 @@ public class CommonSteps extends CommonUtility {
 					getText(pomManager.getLoginPom().getLoginFailedWarning(), time)
 							.contains(getStringValueFromProperties(name)));
 			break;
-		
+
 		case "success":
-			print("product added = "+getText(pomManager.getCommonElement().getProductAddedMessage(), time));
-			Assert.assertTrue("poduct added to cart success message should display", 
+			print("product added = " + getText(pomManager.getCommonElement().getProductAddedMessage(), time));
+			Assert.assertTrue("poduct added to cart success message should display",
 					getText(pomManager.getCommonElement().getProductAddedMessage(), time)
-					.contains(getStringValueFromProperties(name)));
+							.contains(getStringValueFromProperties(name)));
 			break;
-			
+
 		case "alert":
 			ExplicityWaitUtility.waitForAlert(driver, time);
 			Alert alert = driver.switchTo().alert();
 			String text = alert.getText();
 			alert.accept();
 			Assert.assertEquals("Alert should present", getStringValueFromProperties(name), text);
+			break;
+
+		case "termsAndConditionsWarning":
+			print("terms and conditions warning = "
+					+ getText(pomManager.getCartPom().getTermsAndConditionWarningMessage(), time));
+			Assert.assertTrue("warning should display",
+					getText(pomManager.getCartPom().getTermsAndConditionWarningMessage(), time)
+							.contains(getStringValueFromProperties(name)));
+			break;
+
+		case "orderConfirm":
+			print("order confirmed - " + getText(pomManager.getCheckoutPom().getOrderCompletedMessage(), time));
+			Assert.assertTrue("order confirmed", getText(pomManager.getCheckoutPom().getOrderCompletedMessage(), time)
+					.contains(getStringValueFromProperties(name)));
 			break;
 		}
 	}

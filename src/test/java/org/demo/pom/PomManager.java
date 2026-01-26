@@ -42,6 +42,11 @@ public class PomManager {
 		return productDetailsPom == null? productDetailsPom = new ProductDetailsPage(): productDetailsPom;
 	}
 	
+	private CheckoutPage checkoutPom;
+	public CheckoutPage getCheckoutPom() {
+		return checkoutPom == null? checkoutPom = new CheckoutPage(): checkoutPom;
+	}
+	
 	
 	
 	
