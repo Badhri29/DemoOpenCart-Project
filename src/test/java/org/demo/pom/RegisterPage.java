@@ -96,33 +96,33 @@ public class RegisterPage extends CommonUtility {
 		return registerCompletedText;
 	}
 
-	int time = Integer.parseInt(getValueFromProperties("waitingTime"));
+	int time = getIntValueFromProperties("waitingTime");
 
 	public void registerAllDetails() {
 		click(getGenderMale(), time);
-		sendKeys(getFirstName(), getValueFromProperties("firstName"), time);
-		sendKeys(getLastName(), getValueFromProperties("lastName"), time);
-		sendKeys(getEmail(), getValueFromProperties("email"), time);
-		sendKeys(getPassword(), getValueFromProperties("password"), time);
-		sendKeys(getConfirmPassword(), getValueFromProperties("password"), time);
+		sendKeys(getFirstName(), getStringValueFromProperties("firstName"), time);
+		sendKeys(getLastName(), getStringValueFromProperties("lastName"), time);
+		sendKeys(getEmail(), getStringValueFromProperties("email"), time);
+		sendKeys(getPassword(), getStringValueFromProperties("password"), time);
+		sendKeys(getConfirmPassword(), getStringValueFromProperties("password"), time);
 	}
 
 	public void registerMandatoryOnly() {
-		sendKeys(getFirstName(), getValueFromProperties("firstName"), time);
-		sendKeys(getLastName(), getValueFromProperties("lastName"), time);
-		sendKeys(getEmail(), getValueFromProperties("email"), time);
-		sendKeys(getPassword(), getValueFromProperties("password"), time);
-		sendKeys(getConfirmPassword(), getValueFromProperties("password"), time);
+		sendKeys(getFirstName(), getStringValueFromProperties("firstName"), time);
+		sendKeys(getLastName(), getStringValueFromProperties("lastName"), time);
+		sendKeys(getEmail(), getStringValueFromProperties("email"), time);
+		sendKeys(getPassword(), getStringValueFromProperties("password"), time);
+		sendKeys(getConfirmPassword(), getStringValueFromProperties("password"), time);
 	}
 
 	public void registerInvalidEmail() {
-		sendKeys(getEmail(), getValueFromProperties("password"), time);
+		sendKeys(getEmail(), getStringValueFromProperties("password"), time);
 		keyboardKeyPress(KeyEvent.VK_TAB);
 	}
 
 	public void registerInvalidPassword() {
-		sendKeys(getPassword(), getValueFromProperties("password"), time);
-		sendKeys(getConfirmPassword(), getValueFromProperties("email"), time);
+		sendKeys(getPassword(), getStringValueFromProperties("password"), time);
+		sendKeys(getConfirmPassword(), getStringValueFromProperties("email"), time);
 		keyboardKeyPress(KeyEvent.VK_TAB);
 	}
 }

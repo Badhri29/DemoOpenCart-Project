@@ -18,8 +18,8 @@ public class RegisterSteps extends CommonUtility {
 		pomManager.getRegisterPom().registerMandatoryOnly();
 	}
 
-	@When("enter invalid email")
-	public void enterInvalidEmail() {
+	@When("enter invalid register email")
+	public void enterInvalidRegisterEmail() {
 		pomManager.getRegisterPom().registerInvalidEmail();
 	}
 

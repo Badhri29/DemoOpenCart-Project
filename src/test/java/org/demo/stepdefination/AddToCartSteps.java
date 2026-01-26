@@ -16,10 +16,6 @@ public class AddToCartSteps {
 	public void systemShouldShowSuccessMessage() {
 	}
 
-	@When("the user navigates to the cart page")
-	public void theUserNavigatesToTheCartPage() {
-	}
-
 	@Then("the cart page should display the added product")
 	public void theCartPageShouldDisplayTheAddedProduct() {
 	}

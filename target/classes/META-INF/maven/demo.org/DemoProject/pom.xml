@@ -16,7 +16,7 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>7.20.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -26,6 +26,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>5.9.0</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 </project>

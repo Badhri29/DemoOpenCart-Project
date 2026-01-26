@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.179" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="AddToCart" name="Add product to cart from product listing page" time="0.017">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When the user enters a valid product name in the search field...............passed
+And click "search" button...................................................passed
+And the user selects a product from the listing.............................passed
+And click "Add to Cart" button..............................................passed
+Then system should show success message.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="View product in cart after adding" time="0.004">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When the user enters a valid product name in the search field...............passed
+And click "search" button...................................................passed
+And click "Add to Cart" button..............................................passed
+And the user navigates to the cart page.....................................passed
+Then the cart page should display the added product.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Search product using invalid product name" time="0.003">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When the user enters an invalid product name in the search field............passed
+And click "search" button...................................................passed
+Then the no results found message should be displayed.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Search product without entering product name" time="0.003">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "search" button..................................................passed
+Then system should display alert............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

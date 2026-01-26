@@ -19,7 +19,7 @@ public class HooksSteps extends CommonUtility{
 	@After
 	public void tearDown(Scenario sc) {
 		screenShot(sc.getName()+"_Line_"+sc.getLine());
-		closeBrowser(2);
+		closeBrowser(0);
 		PomManager.setPomManager(null);
 		print("----------stop---------");
 	}
