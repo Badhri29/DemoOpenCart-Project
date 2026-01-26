@@ -12,9 +12,9 @@ public class PomManager {
 		PomManager.pomManager = pomManager;
 	}
 	
-	private HomePage homePom;
-	public HomePage getHomePom() {
-		return homePom == null? homePom = new HomePage() : homePom;
+	private CommonElements commonElementPom;	
+	public CommonElements getCommonElement() {
+		return commonElementPom == null? commonElementPom = new CommonElements() : commonElementPom;
 	}
 
 	private RegisterPage registerPom;
@@ -26,4 +26,29 @@ public class PomManager {
 	public LoginPage getLoginPom() {
 		return loginPom == null? loginPom = new LoginPage() : loginPom;
 	}
+	
+	private ProductListingPage productListingPom;
+	public ProductListingPage getProductListingPom() {
+		return productListingPom == null? productListingPom = new ProductListingPage(): productListingPom;
+	}
+	
+	private CartPage cartPom;
+	public CartPage getCartPom() {
+		return cartPom == null? cartPom = new CartPage(): cartPom;
+	}
+	
+	private ProductDetailsPage productDetailsPom;
+	public ProductDetailsPage getProductDetailsPom() {
+		return productDetailsPom == null? productDetailsPom = new ProductDetailsPage(): productDetailsPom;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

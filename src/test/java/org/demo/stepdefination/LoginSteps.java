@@ -19,7 +19,7 @@ public class LoginSteps extends CommonUtility {
 	@Then("user should navigate to home page")
 	public void userShouldNavigateToHomePage() {
 		Assert.assertEquals("login mail id should display", getStringValueFromProperties("email"),
-				getText(pomManager.getHomePom().getMyAccountLink(), time));
+				getText(pomManager.getCommonElement().getMyAccountLink(), time));
 	}
 
 	@When("enter invalid login email")

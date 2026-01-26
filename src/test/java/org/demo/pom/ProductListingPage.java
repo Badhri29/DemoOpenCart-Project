@@ -13,8 +13,16 @@ public class ProductListingPage extends CommonUtility{
 	@FindBy(xpath = "(//h2[@class='product-title']/descendant::a)[1]")
 	private WebElement selectProduct;
 	
+	@FindBy(xpath = "//div[@class='search-results']/child::strong")
+	private WebElement searchResult;
+
 	public WebElement getSelectProduct() {
 		return selectProduct;
 	}
 
+	public WebElement getSearchResult() {
+		return searchResult;
+	}
+	
+	
 }

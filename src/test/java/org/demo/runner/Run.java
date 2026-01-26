@@ -16,8 +16,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 					features 			= "src/test/resources/Features",
 					glue 				= "org.demo.stepdefination",
 					snippets 			= SnippetType.CAMELCASE,
-					dryRun 				=  true,
-					tags 				= "@AddToCart",
+					dryRun 				=  false,
+					tags 				= "@Smoke",
 					stepNotifications 	= true,
 					plugin 				= 	{
 													"pretty",

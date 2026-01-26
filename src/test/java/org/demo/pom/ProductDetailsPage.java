@@ -13,4 +13,8 @@ public class ProductDetailsPage extends CommonUtility {
 	@FindBy(xpath = "//input[@class='qty-input']")
 	private WebElement quantityField;
 
+	public WebElement getQuantityField() {
+		return quantityField;
+	}
+
 }

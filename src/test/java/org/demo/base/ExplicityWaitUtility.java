@@ -28,4 +28,12 @@ public class ExplicityWaitUtility extends JavaScriptUtility{
 			e.printStackTrace();
 		}
 	}
+	
+	public static void waitForAlert(WebDriver driver, int explicityWait) {
+		try {
+			wait(driver, explicityWait).until(ExpectedConditions.alertIsPresent());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
