@@ -23,6 +23,8 @@ public class AddToCartSteps extends CommonUtility {
 
 	@Then("check added product should present in the cart page")
 	public void checkAddedProductShouldPresentInTheCartPage() {
+		staticWait(2);
+		print("product name "+getText(pomManager.getCartPom().getProductName(), time));
 		Assert.assertTrue("Added Product should present", getText(pomManager.getCartPom().getProductName(), time)
 				.contains(getStringValueFromProperties("validProductName")));
 	}

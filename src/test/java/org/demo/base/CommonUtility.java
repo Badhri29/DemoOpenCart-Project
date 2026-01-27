@@ -30,7 +30,7 @@ import net.masterthought.cucumber.ReportBuilder;
 public class CommonUtility {
 	public static WebDriver driver;
 
-	public static WebDriver launchBorwser(String browserName) {
+	public static void launchBorwser(String browserName) {
 		List<String> args = new ArrayList<>();
 		args.add("--start-maximized");
 		args.add("--incognito");
@@ -58,7 +58,7 @@ public class CommonUtility {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return driver;
+//		return driver;
 	}
 
 	public static void launchUrl(String url) {
@@ -92,10 +92,10 @@ public class CommonUtility {
 	}
 
 	public static void screenShot(String screenshotName) {
-		File screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File file = new File(
-				System.getProperty("user.dir") + "\\src\\test\\resources\\ScreenShot\\" + screenshotName + ".png");
 		try {
+			File screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			File file = new File(
+					System.getProperty("user.dir") + "\\src\\test\\resources\\ScreenShot\\" + screenshotName + ".png");
 			FileHandler.copy(screenShot, file);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -163,7 +163,7 @@ public class CommonUtility {
 		}
 		return Boolean.parseBoolean(prop.getProperty(key));
 	}
-	
+
 	public static String getStringValueFromProperties(String key) {
 		Properties prop = null;
 		if (prop == null)
@@ -197,7 +197,7 @@ public class CommonUtility {
 		try {
 
 			File file = new File(System.getProperty("user.dir") + reportStoredLocation);
-			print("file location is "+file);
+			print("file location is " + file);
 
 			Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
 			String tester = "tester", approved = "approved", manager = "manager", sprint = "sprint",
