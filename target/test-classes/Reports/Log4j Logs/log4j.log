@@ -1,0 +1,195 @@
+28-01-2026 21:47: 00 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 01 INFO  [RegisterSteps] - "'REGISTER_LINK' button clicked
+".28-01-2026 21:47: 01 INFO  [RegisterSteps] - "Register all manadatroy entered success
+".28-01-2026 21:47: 02 INFO  [RegisterSteps] - "'REGISTER_SUBMIT' button clicked
+".28-01-2026 21:47: 02 INFO  [RegisterSteps] - "Expected Complete Result: Your registration completed | Actual Complete Result: Your registration completed
+".28-01-2026 21:47: 03 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 07 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 07 INFO  [RegisterSteps] - "'REGISTER_LINK' button clicked
+".28-01-2026 21:47: 08 INFO  [RegisterSteps] - "Register invalid email entered success
+".28-01-2026 21:47: 08 INFO  [RegisterSteps] - "Expected Register Email Warning: Wrong email | Actual Register Email Warning: Wrong email
+".28-01-2026 21:47: 08 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 12 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 12 INFO  [RegisterSteps] - "'REGISTER_LINK' button clicked
+".28-01-2026 21:47: 13 INFO  [RegisterSteps] - "Register invalid password entered success
+".28-01-2026 21:47: 13 INFO  [RegisterSteps] - "Expected Register Password Warning: password do not match | Actual Register Password Warning: The password and confirmation password do not match.
+".28-01-2026 21:47: 13 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 17 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 18 INFO  [RegisterSteps] - "'LOGIN_LINK' button clicked
+".28-01-2026 21:47: 18 INFO  [RegisterSteps] - "Valid login details entered
+".28-01-2026 21:47: 19 INFO  [RegisterSteps] - "'LOGIN_SUBMIT' button clicked
+".28-01-2026 21:47: 19 INFO  [RegisterSteps] - "Expected emailID: testingQA20@gmail.com | Actual emailId: testingQA20@gmail.com
+".28-01-2026 21:47: 19 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 24 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 24 INFO  [RegisterSteps] - "'LOGIN_LINK' button clicked
+".28-01-2026 21:47: 25 INFO  [RegisterSteps] - "Login attempted with invalid email
+".28-01-2026 21:47: 25 INFO  [RegisterSteps] - "Expected Login Email Warning: Please enter a valid email address. | Actual Login Email Warning: Please enter a valid email address.
+".28-01-2026 21:47: 25 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 31 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 31 INFO  [RegisterSteps] - "'LOGIN_LINK' button clicked
+".28-01-2026 21:47: 32 INFO  [RegisterSteps] - "Login attempted with invalid password
+".28-01-2026 21:47: 32 INFO  [RegisterSteps] - "'LOGIN_SUBMIT' button clicked
+".28-01-2026 21:47: 32 INFO  [RegisterSteps] - "Expected Login Failed Warning: Login was unsuccessful. | Actual Login Failed Warning: Login was unsuccessful. Please correct the errors and try again.
+".28-01-2026 21:47: 32 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 37 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 38 INFO  [RegisterSteps] - "'LOGIN_LINK' button clicked
+".28-01-2026 21:47: 38 INFO  [RegisterSteps] - "Login attempted without entering email and password
+".28-01-2026 21:47: 39 INFO  [RegisterSteps] - "'LOGIN_SUBMIT' button clicked
+".28-01-2026 21:47: 39 INFO  [RegisterSteps] - "Expected Login Failed Warning: Login was unsuccessful. | Actual Login Failed Warning: Login was unsuccessful. Please correct the errors and try again.
+".28-01-2026 21:47: 39 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 43 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 44 INFO  [RegisterSteps] - "Product name entered in search field: validProductName
+".28-01-2026 21:47: 44 INFO  [RegisterSteps] - "'SEARCH' button clicked
+".28-01-2026 21:47: 46 INFO  [RegisterSteps] - "Product selected from the product listing
+".28-01-2026 21:47: 46 INFO  [RegisterSteps] - "'ADD TO CART' button clicked
+".28-01-2026 21:47: 47 INFO  [RegisterSteps] - "Expected Product Added Message: The product has been added | Actual Product Added Message: The product has been added to your shopping cart
+".28-01-2026 21:47: 47 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:47: 51 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:47: 52 INFO  [RegisterSteps] - "Product name entered in search field: validProductName
+".28-01-2026 21:47: 52 INFO  [RegisterSteps] - "'SEARCH' button clicked
+".28-01-2026 21:47: 53 INFO  [RegisterSteps] - "'ADD TO CART' button clicked
+".28-01-2026 21:47: 54 INFO  [RegisterSteps] - "'SHOPPING CART' button clicked
+".28-01-2026 21:47: 58 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:48: 03 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:48: 03 INFO  [RegisterSteps] - "Product name entered in search field: invalidProductName
+".28-01-2026 21:48: 04 INFO  [RegisterSteps] - "'SEARCH' button clicked
+".28-01-2026 21:48: 04 INFO  [RegisterSteps] - "Expected Search Result Message: No products were found | Actual Message Displayed: No products were found that matched your criteria.
+".28-01-2026 21:48: 05 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:48: 09 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:48: 09 INFO  [RegisterSteps] - "'SEARCH' button clicked
+".28-01-2026 21:48: 09 INFO  [RegisterSteps] - "Expected Alert Text: Please enter some search keyword | Actual Alert Text: Please enter some search keyword
+".28-01-2026 21:48: 10 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:48: 15 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:48: 15 INFO  [RegisterSteps] - "Valid login details entered
+".28-01-2026 21:48: 17 INFO  [RegisterSteps] - "User logged in with valid credentials
+".28-01-2026 21:48: 19 INFO  [RegisterSteps] - "Product added to cart
+".28-01-2026 21:48: 21 INFO  [RegisterSteps] - "'CHECKOUT' button clicked
+".28-01-2026 21:48: 24 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:48: 28 INFO  [RegisterSteps] - "Browser -'chrome', and URL -'https://demowebshop.tricentis.com/' launched sucessfully
+".28-01-2026 21:48: 29 INFO  [RegisterSteps] - "Valid login details entered
+".28-01-2026 21:48: 30 INFO  [RegisterSteps] - "User logged in with valid credentials
+".28-01-2026 21:48: 31 INFO  [RegisterSteps] - "Product added to cart
+".28-01-2026 21:48: 32 INFO  [RegisterSteps] - "Terms and conditions accepted
+".28-01-2026 21:48: 33 INFO  [RegisterSteps] - "'CHECKOUT' button clicked
+".28-01-2026 21:48: 37 INFO  [RegisterSteps] - "Checkout process executed
+".28-01-2026 21:48: 38 INFO  [RegisterSteps] - "Expected Order Confirmation: Your order has been successfully processed | Actual Order Confirmation: Your order has been successfully processed!
+".28-01-2026 21:48: 39 INFO  [RegisterSteps] - "Browser closing sucess
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/spark.spa_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-variables_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-macros_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/attributes_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/macros/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/log_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/macros/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/macros/log.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/attr-common_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/head.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/head_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/head.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-inject-css_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/navbar_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/sidenav_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/test.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/test_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/test.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/standard-content_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - ""spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/exception_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/category.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/category_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/category.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/device.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/device_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/device.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/author.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/author_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/author.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/log_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/dashboard_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/scripts_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
+".28-01-2026 21:48: 40 DEBUG [cache] - "Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed); will try to load it.
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-inject-js_en_IN.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+".28-01-2026 21:48: 40 DEBUG [cache] - "TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+".28-01-2026 21:48: 40 DEBUG [cache] - "Loading template for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Badhrinarayanan/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+".

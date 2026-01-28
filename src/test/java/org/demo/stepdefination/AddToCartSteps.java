@@ -12,32 +12,39 @@ public class AddToCartSteps extends CommonUtility {
 	int time = getIntValueFromProperties("waitingTime");
 
 	@When("the user enters a {string} in the search field")
-	public void theUserEntersAValidProductNameInTheSearchField(String productName) {
+	public void theUserEntersProductNameInTheSearchField(String productName) {
 		sendKeys(pomManager.getCommonElement().getSearchField(), getStringValueFromProperties(productName), time);
+		extentAndLoggerReport(AddToCartSteps.class,"Product name entered in search field: " + productName);
 	}
 
 	@When("the user selects a product from the listing")
 	public void theUserSelectsAProductFromTheListing() {
 		click(pomManager.getProductListingPom().getSelectProduct(), time);
+		extentAndLoggerReport(AddToCartSteps.class,"Product selected from the product listing");
 	}
 
 	@Then("check added product should present in the cart page")
 	public void checkAddedProductShouldPresentInTheCartPage() {
 		staticWait(2);
-		print("product name "+getText(pomManager.getCartPom().getProductName(), time));
-		Assert.assertTrue("Added Product should present", getText(pomManager.getCartPom().getProductName(), time)
-				.contains(getStringValueFromProperties("validProductName")));
+
+		String actualProductName = getText(pomManager.getCartPom().getProductName(), time);
+		String expectedProductName = getStringValueFromProperties("validProductName");
+
+		Assert.assertTrue("Added product should be present in the cart page",
+				actualProductName.contains(expectedProductName));
+
+		extentAndLoggerReport(AddToCartSteps.class,"Expected Product Name: " + expectedProductName + " | Actual Product Name in Cart: "
+				+ actualProductName);
 	}
 
 	@Then("{string} message should be displayed")
-	public void aNoResultsFoundMessageShouldBeDisplayed(String searchResult) {
-		Assert.assertTrue("Product Listing page should be empty",
-				getText(pomManager.getProductListingPom().getSearchResult(), time).contains(searchResult));
-	}
+	public void messageShouldBeDisplayed(String searchResult) {
 
-	@Then("a validation message should be displayed to enter product name")
-	public void aValidationMessageShouldBeDisplayedToEnterProductName() {
-	}
+		String actualMessage = getText(pomManager.getProductListingPom().getSearchResult(), time);
 
+		Assert.assertTrue("Expected search result message should be displayed", actualMessage.contains(searchResult));
+
+		extentAndLoggerReport(AddToCartSteps.class,
+				"Expected Search Result Message: " + searchResult + " | Actual Message Displayed: " + actualMessage);
+	}
 }
-	

@@ -1,7 +1,7 @@
 package org.demo.runner;
 
 import org.demo.base.CommonUtility;
-import org.demo.base.ExtendReportUtility;
+import org.demo.base.AllureReportUtility;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
@@ -25,11 +25,11 @@ import io.cucumber.junit.CucumberOptions;
 public class Rerun extends CommonUtility{
 	@BeforeClass
 	public static void setUp() {
-		ExtendReportUtility.startReport("src/test/resources/RerunReports/ExtendReport/extentReport.html");
+		AllureReportUtility.startReport("src/test/resources/RerunReports/ExtendReport/extentReport.html");
 	}
 	@AfterClass
 	public static void tearDown() {
 		generateJvmReport("src/test/resources/RerunReports/JVM Report", "src/test/resources/RerunReports/JsonReport/jsonReport.json");
-		ExtendReportUtility.endReport();
+		AllureReportUtility.endReport();
 	}
 }

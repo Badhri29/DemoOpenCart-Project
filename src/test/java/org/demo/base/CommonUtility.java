@@ -9,6 +9,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.demo.stepdefination.RegisterSteps;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -133,6 +136,9 @@ public class CommonUtility {
 		}
 	}
 
+	/**
+	 * @uses Press any key from keyboard
+	*/
 	public static void keyboardKeyPress(int keyName) {
 		try {
 			Robot r = new Robot();
@@ -143,14 +149,20 @@ public class CommonUtility {
 		}
 	}
 
+	/**
+	 * @uses print message if permission true
+	*/
 	public static void print(String text) {
-		boolean permission = getBolleanValueFromProperties("printPermission");
+		boolean permission = getBooleanValueFromProperties("printPermission");
 		if (permission) {
 			System.out.println(text);
 		}
 	}
-
-	public static boolean getBolleanValueFromProperties(String key) {
+	
+	/**
+	 * @uses get value from properties file that return boolean value
+	*/
+	public static boolean getBooleanValueFromProperties(String key) {
 		Properties prop = null;
 		if (prop == null)
 			prop = new Properties();
@@ -164,6 +176,9 @@ public class CommonUtility {
 		return Boolean.parseBoolean(prop.getProperty(key));
 	}
 
+	/**
+	 * @uses get value from properties file that return String value
+	*/
 	public static String getStringValueFromProperties(String key) {
 		Properties prop = null;
 		if (prop == null)
@@ -178,6 +193,9 @@ public class CommonUtility {
 		return prop.getProperty(key);
 	}
 
+	/**
+	 * @uses get value from properties file that return Int value
+	*/
 	public static int getIntValueFromProperties(String key) {
 		Properties prop = null;
 		if (prop == null)
@@ -193,6 +211,9 @@ public class CommonUtility {
 		return Integer.parseInt(prop.getProperty(key));
 	}
 
+	/**
+	 * @uses It generate JVM Report
+	*/
 	public static void generateJvmReport(String reportStoredLocation, String jsonFileLocation) {
 		try {
 
@@ -225,4 +246,12 @@ public class CommonUtility {
 		}
 	}
 
+	/**
+	 * @uses use this method every steps that's maintain log in file, console, and extent report
+	*/
+	public static void extentAndLoggerReport(Class<?> clazz, String message) {
+		Logger logger = LogManager.getLogger(clazz);
+		logger.info(message);
+		AllureReportUtility.test.info(message);
+	}
 }

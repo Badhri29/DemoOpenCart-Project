@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="40.147" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="Register" name="To check Register with mandatroy filed only" time="8.781">
+<testsuite name="Cucumber" time="105.362" tests="13" skipped="0" failures="2" errors="0">
+<testcase classname="Register" name="To check Register with mandatroy filed only" time="9.104">
 <system-out><![CDATA[
 Given Open Browser and launch url...........................................passed
 When click "register_link" button...........................................passed
@@ -9,7 +9,23 @@ And click "register_submit" button..........................................pass
 Then system should display "registrationCompleted" message..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login" name="To check Login with valid credential" time="6.042">
+<testcase classname="Register" name="To check Register with invalid credential" time="5.41">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "register_link" button...........................................passed
+When enter invalid register email...........................................passed
+Then system should display "registerEmail_Error" message....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register" name="To check Register with invalid credential" time="5.106">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "register_link" button...........................................passed
+When enter different confirm password.......................................passed
+Then system should display "registerPassword_Error" message.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with valid credential" time="6.056">
 <system-out><![CDATA[
 Given Open Browser and launch url...........................................passed
 When click "login_link" button..............................................passed
@@ -18,17 +34,89 @@ And click "login_submit" button.............................................pass
 Then user should navigate to home page......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="AddToCart" name="View product in cart after adding" time="9.064">
+<testcase classname="Login" name="To check Login with invalid credential" time="5.72">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "login_link" button..............................................passed
+When enter invalid login email..............................................passed
+Then system should display "loginEmail_Error" message.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with invalid credential" time="7.603">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "login_link" button..............................................passed
+When enter invalid login password...........................................passed
+And click "login_submit" button.............................................passed
+Then system should display "loginFail" message..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with invalid credential" time="6.876">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "login_link" button..............................................passed
+When leave empty email and password.........................................passed
+And click "login_submit" button.............................................passed
+Then system should display "loginFail" message..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Add product to cart from product listing page" time="7.664">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When the user enters a "validProductName" in the search field...............passed
+And click "search" button...................................................passed
+And the user selects a product from the listing.............................passed
+And click "Add to Cart" button..............................................passed
+Then system should display "success" message................................passed
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="View product in cart after adding" time="10.989">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;actualProductName&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "actualProductName" is null
+	at org.demo.stepdefination.AddToCartSteps.checkAddedProductShouldPresentInTheCartPage(AddToCartSteps.java:34)
+	at ✽.check added product should present in the cart page(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/03_AddToCart.feature:21)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Open Browser and launch url...........................................passed
 When the user enters a "validProductName" in the search field...............passed
 And click "search" button...................................................passed
 And click "Add to Cart" button..............................................passed
 And click "shopping Cart" button............................................passed
-And check added product should present in the cart page.....................passed
+And check added product should present in the cart page.....................failed
 ]]></system-out>
 </testcase>
-<testcase classname="Checkout" name="Verify order confirm details and place order" time="16.04">
+<testcase classname="AddToCart" name="Search product using invalid product name" time="6.67">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When the user enters a "invalidProductName" in the search field.............passed
+And click "search" button...................................................passed
+Then "No products were found" message should be displayed...................passed
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Search product without entering product name" time="5.115">
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+When click "search" button..................................................passed
+Then system should display "alert" message..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Checkout" name="Navigate to checkout page without accept terms and conditions" time="13.818">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;actualCase8&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "actualCase8" is null
+	at org.demo.stepdefination.CommonSteps.systemShouldDisplayMessage(CommonSteps.java:124)
+	at ✽.system should display "termsAndConditionsWarning" message(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/04_Checkout.feature:12)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................passed
+And the user logs in with valid credentials.................................passed
+And the user add product to the cart........................................passed
+When click "Checkout" button................................................passed
+Then system should display "termsAndConditionsWarning" message..............failed
+]]></system-out>
+</testcase>
+<testcase classname="Checkout" name="Verify order confirm details and place order" time="15.018">
 <system-out><![CDATA[
 Given Open Browser and launch url...........................................passed
 And the user logs in with valid credentials.................................passed

@@ -105,6 +105,7 @@ public class RegisterPage extends CommonUtility {
 		sendKeys(getEmail(), getStringValueFromProperties("email"), time);
 		sendKeys(getPassword(), getStringValueFromProperties("password"), time);
 		sendKeys(getConfirmPassword(), getStringValueFromProperties("password"), time);
+
 	}
 
 	public void registerMandatoryOnly() {
@@ -113,16 +114,19 @@ public class RegisterPage extends CommonUtility {
 		sendKeys(getEmail(), getStringValueFromProperties("email"), time);
 		sendKeys(getPassword(), getStringValueFromProperties("password"), time);
 		sendKeys(getConfirmPassword(), getStringValueFromProperties("password"), time);
+
 	}
 
 	public void registerInvalidEmail() {
 		sendKeys(getEmail(), getStringValueFromProperties("password"), time);
 		keyboardKeyPress(KeyEvent.VK_TAB);
+
 	}
 
 	public void registerInvalidPassword() {
 		sendKeys(getPassword(), getStringValueFromProperties("password"), time);
 		sendKeys(getConfirmPassword(), getStringValueFromProperties("email"), time);
 		keyboardKeyPress(KeyEvent.VK_TAB);
+
 	}
 }

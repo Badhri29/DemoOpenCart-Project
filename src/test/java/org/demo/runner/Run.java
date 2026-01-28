@@ -1,7 +1,7 @@
 package org.demo.runner;
 
 import org.demo.base.CommonUtility;
-import org.demo.base.ExtendReportUtility;
+import org.demo.base.AllureReportUtility;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
@@ -16,8 +16,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 					glue 				= "org.demo.stepdefination",
 					snippets 			= SnippetType.CAMELCASE,
 					dryRun 				=  false,
-					tags 				= "@Smoke",
-					stepNotifications 	= true,
+					tags 				= "not (@Register and @Sanity and @Positive)",
+					stepNotifications 	= false,
 					plugin 				= 	{
 												"pretty",
 												"usage:src/test/resources/Reports/UsageReport/usageReport.txt",
@@ -30,12 +30,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 public class Run extends CommonUtility{
 	@BeforeClass
 	public static void setUp() {
-		ExtendReportUtility.startReport("\\src/test/resources/Reports/ExtentReport/extentReport.html");
+		AllureReportUtility.startReport("\\src/test/resources/Reports/ExtentReport/extentReport.html");
 	}
 	
 	@AfterClass
 	public static void tearDown() {
 		generateJvmReport("\\src\\test\\resources\\Reports\\JVM Report","src/test/resources/Reports/JsonReport/jsonReport.json");
-		ExtendReportUtility.endReport();
+		AllureReportUtility.endReport();
 	}
 }

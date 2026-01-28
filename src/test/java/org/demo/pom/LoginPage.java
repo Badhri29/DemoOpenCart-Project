@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends CommonUtility {
-	
+
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -53,41 +53,25 @@ public class LoginPage extends CommonUtility {
 	public void enterValidLoginDetails() {
 		sendKeys(getEmailField(), getStringValueFromProperties("email"), time);
 		sendKeys(getPasswordField(), getStringValueFromProperties("password"), time);
+
 	}
 
 	public void invalidEmailLogin() {
 		sendKeys(getEmailField(), getStringValueFromProperties("password"), time);
 		keyboardKeyPress(KeyEvent.VK_TAB);
+
 	}
-	
+
 	public void invalidPasswordLogin() {
 		sendKeys(getEmailField(), getStringValueFromProperties("email"), time);
 		keyboardKeyPress(KeyEvent.VK_TAB);
+
 	}
-	
+
 	public void emptyLogin() {
 		getEmailField().clear();
 		getPasswordField().clear();
+
 	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
