@@ -12,12 +12,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-					features 			= "src/test/resources/Features",
-					glue 				= "org.demo.stepdefination",
-					snippets 			= SnippetType.CAMELCASE,
-					dryRun 				=  false,
-					tags 				= "not (@Register and @Sanity and @Positive)",
-					stepNotifications 	= false,
+					features 			=	"src/test/resources/Features",
+					glue 				=	"org.demo.stepdefination",
+					snippets 			=	SnippetType.CAMELCASE,
+					dryRun 				=	false,
+//					tags				=	"@Register",
+					tags 				=	"not (@Register and @Sanity and @Positive)",
+					stepNotifications 	=	false,
 					plugin 				= 	{
 												"pretty",
 												"usage:src/test/resources/Reports/UsageReport/usageReport.txt",

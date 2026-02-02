@@ -2,8 +2,14 @@
 Feature: Register
 
   Background:
-    Given Open Browser and launch url
+    Given Open Browser "<browser>" and launch url
     When click "register_link" button
+    
+  Example:
+  	|browser|
+	|chrome|
+  	|edge|
+  	|firefox|
 
   @Positive @Sanity
   Scenario: To check Register with valid credential

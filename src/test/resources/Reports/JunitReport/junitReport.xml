@@ -1,130 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="105.362" tests="13" skipped="0" failures="2" errors="0">
-<testcase classname="Register" name="To check Register with mandatroy filed only" time="9.104">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "register_link" button...........................................passed
-When enter mandatroy filed only.............................................passed
-And click "register_submit" button..........................................passed
-Then system should display "registrationCompleted" message..................passed
-]]></system-out>
+<testsuite name="Cucumber" time="0.313" tests="14" skipped="0" failures="13" errors="0">
+<testcase classname="Register" name="" time="0.011">
 </testcase>
-<testcase classname="Register" name="To check Register with invalid credential" time="5.41">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "register_link" button...........................................passed
-When enter invalid register email...........................................passed
-Then system should display "registerEmail_Error" message....................passed
-]]></system-out>
-</testcase>
-<testcase classname="Register" name="To check Register with invalid credential" time="5.106">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "register_link" button...........................................passed
-When enter different confirm password.......................................passed
-Then system should display "registerPassword_Error" message.................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login" name="To check Login with valid credential" time="6.056">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "login_link" button..............................................passed
-When enter email and password...............................................passed
-And click "login_submit" button.............................................passed
-Then user should navigate to home page......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login" name="To check Login with invalid credential" time="5.72">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "login_link" button..............................................passed
-When enter invalid login email..............................................passed
-Then system should display "loginEmail_Error" message.......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login" name="To check Login with invalid credential" time="7.603">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "login_link" button..............................................passed
-When enter invalid login password...........................................passed
-And click "login_submit" button.............................................passed
-Then system should display "loginFail" message..............................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login" name="To check Login with invalid credential" time="6.876">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "login_link" button..............................................passed
-When leave empty email and password.........................................passed
-And click "login_submit" button.............................................passed
-Then system should display "loginFail" message..............................passed
-]]></system-out>
-</testcase>
-<testcase classname="AddToCart" name="Add product to cart from product listing page" time="7.664">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When the user enters a "validProductName" in the search field...............passed
-And click "search" button...................................................passed
-And the user selects a product from the listing.............................passed
-And click "Add to Cart" button..............................................passed
-Then system should display "success" message................................passed
-]]></system-out>
-</testcase>
-<testcase classname="AddToCart" name="View product in cart after adding" time="10.989">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;actualProductName&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "actualProductName" is null
-	at org.demo.stepdefination.AddToCartSteps.checkAddedProductShouldPresentInTheCartPage(AddToCartSteps.java:34)
-	at ✽.check added product should present in the cart page(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/03_AddToCart.feature:21)
+<testcase classname="Register" name="To check Register with mandatroy filed only" time="0.023">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;org.demo.base.CommonUtility.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "org.demo.base.CommonUtility.driver" is null
+	at org.demo.base.CommonUtility.launchUrl(CommonUtility.java:71)
+	at org.demo.stepdefination.CommonSteps.openBrowserAndLaunchUrl(CommonSteps.java:56)
+	at ✽.Open Browser "<browser>" and launch url(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/01_Registraction.feature:5)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When the user enters a "validProductName" in the search field...............passed
-And click "search" button...................................................passed
-And click "Add to Cart" button..............................................passed
-And click "shopping Cart" button............................................passed
-And check added product should present in the cart page.....................failed
+Given Open Browser "<browser>" and launch url...............................failed
+When click "register_link" button...........................................skipped
+When enter mandatroy filed only.............................................skipped
+And click "register_submit" button..........................................skipped
+Then system should display "registrationCompleted" message..................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="AddToCart" name="Search product using invalid product name" time="6.67">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When the user enters a "invalidProductName" in the search field.............passed
-And click "search" button...................................................passed
-Then "No products were found" message should be displayed...................passed
-]]></system-out>
-</testcase>
-<testcase classname="AddToCart" name="Search product without entering product name" time="5.115">
-<system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-When click "search" button..................................................passed
-Then system should display "alert" message..................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Checkout" name="Navigate to checkout page without accept terms and conditions" time="13.818">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because &quot;actualCase8&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "actualCase8" is null
-	at org.demo.stepdefination.CommonSteps.systemShouldDisplayMessage(CommonSteps.java:124)
-	at ✽.system should display "termsAndConditionsWarning" message(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/04_Checkout.feature:12)
+<testcase classname="Register" name="To check Register with invalid credential" time="0.006">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;org.demo.base.CommonUtility.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "org.demo.base.CommonUtility.driver" is null
+	at org.demo.base.CommonUtility.launchUrl(CommonUtility.java:71)
+	at org.demo.stepdefination.CommonSteps.openBrowserAndLaunchUrl(CommonSteps.java:56)
+	at ✽.Open Browser "<browser>" and launch url(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/01_Registraction.feature:5)
 ]]>
 </failure>
 <system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-And the user logs in with valid credentials.................................passed
-And the user add product to the cart........................................passed
-When click "Checkout" button................................................passed
-Then system should display "termsAndConditionsWarning" message..............failed
+Given Open Browser "<browser>" and launch url...............................failed
+When click "register_link" button...........................................skipped
+When enter invalid register email...........................................skipped
+Then system should display "registerEmail_Error" message....................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Checkout" name="Verify order confirm details and place order" time="15.018">
+<testcase classname="Register" name="To check Register with invalid credential" time="0.003">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;org.demo.base.CommonUtility.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "org.demo.base.CommonUtility.driver" is null
+	at org.demo.base.CommonUtility.launchUrl(CommonUtility.java:71)
+	at org.demo.stepdefination.CommonSteps.openBrowserAndLaunchUrl(CommonSteps.java:56)
+	at ✽.Open Browser "<browser>" and launch url(file:///C:/Users/Badhrinarayanan/eclipse-workspace-2/DemoOpenCart-Project/src/test/resources/Features/01_Registraction.feature:5)
+]]>
+</failure>
 <system-out><![CDATA[
-Given Open Browser and launch url...........................................passed
-And the user logs in with valid credentials.................................passed
-And the user add product to the cart........................................passed
-Given user accept terms and condition.......................................passed
-When click "Checkout" button................................................passed
-And process all checkout steps..............................................passed
-Then system should display "orderConfirm" message...........................passed
+Given Open Browser "<browser>" and launch url...............................failed
+When click "register_link" button...........................................skipped
+When enter different confirm password.......................................skipped
+Then system should display "registerPassword_Error" message.................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with valid credential" time="0.007">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When click "login_link" button..............................................skipped
+When enter email and password...............................................skipped
+And click "login_submit" button.............................................skipped
+Then user should navigate to home page......................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with invalid credential" time="0.005">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When click "login_link" button..............................................skipped
+When enter invalid login email..............................................skipped
+Then system should display "loginEmail_Error" message.......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with invalid credential" time="0.004">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When click "login_link" button..............................................skipped
+When enter invalid login password...........................................skipped
+And click "login_submit" button.............................................skipped
+Then system should display "loginFail" message..............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="To check Login with invalid credential" time="0.008">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When click "login_link" button..............................................skipped
+When leave empty email and password.........................................skipped
+And click "login_submit" button.............................................skipped
+Then system should display "loginFail" message..............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Add product to cart from product listing page" time="0.006">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When the user enters a "validProductName" in the search field...............skipped
+And click "search" button...................................................skipped
+And the user selects a product from the listing.............................skipped
+And click "Add to Cart" button..............................................skipped
+Then system should display "success" message................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="View product in cart after adding" time="0.003">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When the user enters a "validProductName" in the search field...............skipped
+And click "search" button...................................................skipped
+And click "Add to Cart" button..............................................skipped
+And click "shopping Cart" button............................................skipped
+And check added product should present in the cart page.....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Search product using invalid product name" time="0.005">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When the user enters a "invalidProductName" in the search field.............skipped
+And click "search" button...................................................skipped
+Then "No products were found" message should be displayed...................skipped
+]]></system-out>
+</testcase>
+<testcase classname="AddToCart" name="Search product without entering product name" time="0.005">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+When click "search" button..................................................skipped
+Then system should display "alert" message..................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Checkout" name="Navigate to checkout page without accept terms and conditions" time="0.006">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+And the user logs in with valid credentials.................................skipped
+And the user add product to the cart........................................skipped
+When click "Checkout" button................................................skipped
+Then system should display "termsAndConditionsWarning" message..............skipped
+]]></system-out>
+</testcase>
+<testcase classname="Checkout" name="Verify order confirm details and place order" time="0.004">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;org.demo.stepdefination.HooksSteps.driver&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "org.demo.stepdefination.HooksSteps.driver" is null
+	at org.demo.stepdefination.HooksSteps.tearDown(HooksSteps.java:27)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Open Browser and launch url...........................................undefined
+And the user logs in with valid credentials.................................skipped
+And the user add product to the cart........................................skipped
+Given user accept terms and condition.......................................skipped
+When click "Checkout" button................................................skipped
+And process all checkout steps..............................................skipped
+Then system should display "orderConfirm" message...........................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -1,2 +1,4 @@
-file:src/test/resources/Features/03_AddToCart.feature:16
-file:src/test/resources/Features/04_Checkout.feature:10
+file:src/test/resources/Features/02_Login.feature:9:15:20:26
+file:src/test/resources/Features/01_Registraction.feature:21:27:32
+file:src/test/resources/Features/03_AddToCart.feature:8:16:24:29
+file:src/test/resources/Features/04_Checkout.feature:10:15

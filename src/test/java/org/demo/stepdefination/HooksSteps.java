@@ -15,10 +15,10 @@ public class HooksSteps extends CommonUtility{
 	@Before()
 	public void setUp(Scenario sc) {
 		AllureReportUtility.createTest(sc);
-		String browser = "chrome".toUpperCase();
-		launchBorwser(browser);
-		String url = "https://demowebshop.tricentis.com/";
-		launchUrl(url);
+//		String browser = "chrome".toUpperCase();
+//		launchBorwser(browser);
+//		String url = "https://demowebshop.tricentis.com/";
+//		launchUrl(url);
 		
 	}
 	

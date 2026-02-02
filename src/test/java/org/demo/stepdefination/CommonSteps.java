@@ -46,13 +46,16 @@ public class CommonSteps extends CommonUtility {
 			click(pomManager.getCommonElement().getShoppingCartLink(), time);
 			break;
 		}
-		extentAndLoggerReport(CommonSteps.class,"'" + name.toUpperCase() + "' button clicked");
+		extentAndLoggerReport(CommonSteps.class, "'" + name.toUpperCase() + "' button clicked");
 	}
 
-	@Given("Open Browser and launch url")
-	public void openBrowserAndLaunchUrl() {
-		extentAndLoggerReport(CommonSteps.class,"Browser -'" + getStringValueFromProperties("browser") + "', and URL -'"
-				+ getStringValueFromProperties("url") + "' launched sucessfully");
+	@Given("Open Browser {string} and launch url")
+	public void openBrowserAndLaunchUrl(String browserName) {
+		launchBorwser(browserName);
+		String url = getStringValueFromProperties("url");
+		launchUrl(url);
+		extentAndLoggerReport(CommonSteps.class,
+				"Browser -'" + browserName + "', and URL -'" + url + "' launched sucessfully");
 	}
 
 	@Then("system should display {string} message")
@@ -71,7 +74,7 @@ public class CommonSteps extends CommonUtility {
 			String expectedCase2 = getStringValueFromProperties(name);
 			String actualCase2 = getText(pomManager.getRegisterPom().getRegisterConfirmPasswordWarning(), time);
 			Assert.assertTrue("Password warning should display", actualCase2.contains(expectedCase2));
-			extentAndLoggerReport(CommonSteps.class,"Expected Register Password Warning: " + expectedCase2
+			extentAndLoggerReport(CommonSteps.class, "Expected Register Password Warning: " + expectedCase2
 					+ " | Actual Register Password Warning: " + actualCase2);
 			break;
 
@@ -79,7 +82,7 @@ public class CommonSteps extends CommonUtility {
 			String expectedCase3 = getStringValueFromProperties(name);
 			String actualCase3 = getText(pomManager.getRegisterPom().getRegisterEmailWarning(), time);
 			Assert.assertTrue("Register Email warning should display", actualCase3.contains(expectedCase3));
-			extentAndLoggerReport(CommonSteps.class,"Expected Register Email Warning: " + expectedCase3
+			extentAndLoggerReport(CommonSteps.class, "Expected Register Email Warning: " + expectedCase3
 					+ " | Actual Register Email Warning: " + actualCase3);
 			break;
 
@@ -95,8 +98,8 @@ public class CommonSteps extends CommonUtility {
 			String expectedCase5 = getStringValueFromProperties(name);
 			String actualCase5 = getText(pomManager.getLoginPom().getLoginFailedWarning(), time);
 			Assert.assertTrue("Login failed warning should display", actualCase5.contains(expectedCase5));
-			extentAndLoggerReport(CommonSteps.class,"Expected Login Failed Warning: " + expectedCase5 + " | Actual Login Failed Warning: "
-					+ actualCase5);
+			extentAndLoggerReport(CommonSteps.class, "Expected Login Failed Warning: " + expectedCase5
+					+ " | Actual Login Failed Warning: " + actualCase5);
 			break;
 
 		case "success":
@@ -104,7 +107,7 @@ public class CommonSteps extends CommonUtility {
 			String actualCase6 = getText(pomManager.getCommonElement().getProductAddedMessage(), time);
 			Assert.assertTrue("product added to cart success message should display",
 					actualCase6.contains(expectedCase6));
-			extentAndLoggerReport(CommonSteps.class,"Expected Product Added Message: " + expectedCase6
+			extentAndLoggerReport(CommonSteps.class, "Expected Product Added Message: " + expectedCase6
 					+ " | Actual Product Added Message: " + actualCase6);
 			break;
 
@@ -115,7 +118,8 @@ public class CommonSteps extends CommonUtility {
 			String actualCase7 = alert.getText();
 			alert.accept();
 			Assert.assertEquals("Alert should present", expectedCase7, actualCase7);
-			extentAndLoggerReport(CommonSteps.class,"Expected Alert Text: " + expectedCase7 + " | Actual Alert Text: " + actualCase7);
+			extentAndLoggerReport(CommonSteps.class,
+					"Expected Alert Text: " + expectedCase7 + " | Actual Alert Text: " + actualCase7);
 			break;
 
 		case "termsAndConditionsWarning":
